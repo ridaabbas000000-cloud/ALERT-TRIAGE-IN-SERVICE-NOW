@@ -14,11 +14,11 @@ The objective was to execute a defensible, evidence-based triage workflow—movi
 ## 📁 Repository Structure
 
 * [**`README.md`**](./README.md) — Main project overview, triage methodology, and incident summary table
-* [**`INC0010145.jpeg`**](./INC0010145.jpeg) — Multiple Failed Logins ticket screenshot
- * [**`INC0010146.jpeg`**](./INC0010146.jpeg) — Ransomware Mass Encryption ticket screenshot
-* [**`INC0010147.jpeg`**](./INC0010147.jpeg) — Malicious IP Outbound Connection ticket screenshot
-* [**`INC0010148.jpeg`**](./INC0010148.jpeg) — Unusual Login Time ticket screenshot
- * [**`INC0010149.jpeg`**](./INC0010149.jpeg) — Encoded PowerShell Execution ticket screenshot
+* [**`INCOO1O145.jpeg`**](./INCOO1O145.jpeg) — Multiple Failed Logins ticket screenshot
+ * [**`INCOO1O146.jpeg`**](./INCOO1O146.jpeg) — Ransomware Mass Encryption ticket screenshot
+* [**`INCOO1O147.jpeg`**](./INCOO1O147.jpeg) — Malicious IP Outbound Connection ticket screenshot
+* [**`INCOO1O148.jpeg`**](./INCOO1O148.jpeg) — Unusual Login Time ticket screenshot
+ * [**`INCOO1O149.jpeg`**](./INCOO1O149.jpeg) — Encoded PowerShell Execution ticket screenshot
 ---
 
 ## 🔄 Triage Methodology
@@ -38,16 +38,16 @@ Each incident followed a structured 7-step triage lifecycle:
 
 | Incident ID | Alert Description | Host / User | Verdict | Severity | Disposition | Evidence / Screenshot |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **INC0010145** | Multiple Failed Logins (Brute Force) | `WKSTN-014` / `jsmith` | True Positive | **Critical** *(Escalated)* | Escalated | [`INC0010145.jpeg`](./INC0010145.jpeg) |
-| **INC0010146** | Ransomware Mass Encryption | `FIN-SRV-02` / `rpatel` | True Positive | **Critical** | Escalated | [`INC0010146.jpeg`](./INC0010146.jpeg) |
-| **INC0010147** | Outbound Connection to Malicious IP | `WKSTN-027` / `agupta` | True Positive | **High** | Escalated | [`INC0010147.jpeg`](./INC0010147.jpeg) |
-| **INC0010148** | Unusual Login Time (02:14 AM) | `LAPTOP-009` / `mlee` | Benign True Positive | **Low** | Closed | [`INC0010148.jpeg`](./INC0010148.jpeg**) |
-| **INC0010149** | Suspicious Encoded PowerShell | `WKSTN-014` / `jsmith` | True Positive | **Critical** | Escalated | [`INC0010149.jpeg`](./INC0010149.jpeg) |
+| **INCOO1O145** | Multiple Failed Logins (Brute Force) | `WKSTN-014` / `jsmith` | True Positive | **Critical** *(Escalated)* | Escalated | [`INCOO1O145.jpeg`](./INCOO1O1455.jpeg) |
+| **INCOO1O146** | Ransomware Mass Encryption | `FIN-SRV-02` / `rpatel` | True Positive | **Critical** | Escalated | [`INCOO1O146.jpeg`](./INCOO1O146.jpeg) |
+| **INCOO1O147** | Outbound Connection to Malicious IP | `WKSTN-027` / `agupta` | True Positive | **High** | Escalated | [`INCOO1O147.jpeg`](./INCOO1O147.jpeg) |
+| **INCOO1O148** | Unusual Login Time (02:14 AM) | `LAPTOP-009` / `mlee` | Benign True Positive | **Low** | Closed | [`INCOO1O148.jpeg`](./INCOO1O148.jpeg**) |
+| **INCOO1O149** | Suspicious Encoded PowerShell | `WKSTN-014` / `jsmith` | True Positive | **Critical** | Escalated | [`INCOO1O149.jpeg`](./INCOO1O149.jpeg) |
 ---
 
 ## 🔗 Attack Chain Correlation Note
 
-* **INC0010145 & INC0010149 Correlation:** `INC0010145` (12 failed logins followed by successful authentication) and `INC0010149` (encoded PowerShell execution) occurred on the same host (`WKSTN-014`) and user (`jsmith`). 
+* **INCOO1O145 & INCOO1O149 Correlation:** `INCOO1O145` (12 failed logins followed by successful authentication) and `INC0010149` (encoded PowerShell execution) occurred on the same host (`WKSTN-014`) and user (`jsmith`). 
 * Correlating these alerts revealed a **multi-stage attack chain** (Initial Access via Brute Force ➔ Execution via Malicious Script Download), raising the severity of the initial access alert to **Critical**.
 
 ---
